@@ -7,13 +7,16 @@ import {templateRefExtractor} from '@angular/core/src/render3';
   styleUrls: ['./cars.component.scss']
 })
 export class CarsComponent {
-  canAddCar = false;
+  addCarStatus = '';
+  inputText = '';
 
-  constructor() {
-    setTimeout(() => {
-      this.canAddCar = true;
-    }, 4000);
+
+  addCar() {
+    this.addCarStatus = 'car was add';
   }
 
-
+  onKeyUp(value) {
+    console.log(event);
+    this.inputText = value;
+  }
 }
