@@ -8,21 +8,26 @@ import {templateRefExtractor} from '@angular/core/src/render3';
 })
 export class CarsComponent {
   carName = '';
-  addCarStatus = false;
-  cars = ['Ford', 'Audi', 'BMW', 'Mazda', 'Lada', 'Bentley'];
-  items = [
-    new Date(2015, 3, 4),
-    new Date(2011, 2, 7),
-    new Date(2017, 4, 6),
-    new Date(2000, 6, 8)
-
-
-  ];
+  carYear = 2017;
+  cars = [{
+    name: 'Ford',
+    year: 2015
+  }, {
+    name: 'Mazda',
+    year: 2010
+  }, {
+    name: 'Audi',
+    year: 2017
+  }];
 
   addCar() {
-    this.addCarStatus = true;
-    this.cars.push(this.carName);
+    this.cars.push({
+      name: this.carName,
+      year: this.carYear
+    });
     this.carName = '';
+    this.carYear = 2017;
+
   }
 
 }
