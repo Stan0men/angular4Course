@@ -7,8 +7,7 @@ import {templateRefExtractor} from '@angular/core/src/render3';
   styleUrls: ['./cars.component.scss']
 })
 export class CarsComponent {
-  carName = '';
-  carYear = 2017;
+
   cars = [{
     name: 'Ford',
     year: 2015
@@ -20,14 +19,8 @@ export class CarsComponent {
     year: 2017
   }];
 
-  addCar() {
-    this.cars.push({
-      name: this.carName,
-      year: this.carYear
-    });
-    this.carName = '';
-    this.carYear = 2017;
-
+  updateCarList(car: { name: string, year: number }) {
+    this.cars.push(car);
   }
 
 }
