@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
-import {templateRefExtractor} from '@angular/core/src/render3';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'app-cars',
   templateUrl: './cars.component.html',
-  styleUrls: ['./cars.component.scss']
+  styleUrls: ['./cars.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class CarsComponent {
 
