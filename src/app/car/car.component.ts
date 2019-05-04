@@ -9,4 +9,5 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CarComponent {
   @Input() carItem: { name: string, year: number };
 
+
 }
